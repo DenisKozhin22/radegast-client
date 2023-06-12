@@ -35,14 +35,12 @@ instance.interceptors.response.use(
 			try {
 				originalRequest._isRetry = true
 				const { data } = await axiosClassic.get<IAuthResponse>(
-					'http://localhost:5000/auth/refresh',
+					'https://rade-gast-server.onrender.com/auth/refresh',
 					{
 						withCredentials: true,
 					},
 				)
 				const cookies = parseCookies()
-				console.log('data', data)
-				console.log('refresh', cookies)
 				originalRequest.headers.Authorization = `Bearer ${data.accessToken}`
 
 				return instance.request(originalRequest)

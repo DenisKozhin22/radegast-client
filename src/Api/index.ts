@@ -5,7 +5,7 @@ import { IAuthResponse } from '@/types/response/IAuthResponse'
 
 export const axiosClassic = axios.create({
 	withCredentials: true,
-	baseURL: 'http://localhost:5000',
+	baseURL: 'https://rade-gast-server.onrender.com',
 	headers: {
 		'Content-Type': 'application/json',
 	},
@@ -13,7 +13,7 @@ export const axiosClassic = axios.create({
 
 export const instance = axios.create({
 	withCredentials: true,
-	baseURL: 'http://localhost:5000',
+	baseURL: 'https://rade-gast-server.onrender.com',
 	headers: {
 		'Content-Type': 'application/json',
 	},

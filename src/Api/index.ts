@@ -5,7 +5,7 @@ import { IAuthResponse } from '@/types/response/IAuthResponse'
 
 export const axiosClassic = axios.create({
 	withCredentials: true,
-	baseURL: '8ab9a41f357e.vps.myjino.ru',
+	baseURL: 'https://8ab9a41f357e.vps.myjino.ru',
 	headers: {
 		'Content-Type': 'application/json',
 	},
@@ -13,7 +13,7 @@ export const axiosClassic = axios.create({
 
 export const instance = axios.create({
 	withCredentials: true,
-	baseURL: '8ab9a41f357e.vps.myjino.ru',
+	baseURL: 'https://8ab9a41f357e.vps.myjino.ru',
 	headers: {
 		'Content-Type': 'application/json',
 	},
@@ -35,7 +35,7 @@ instance.interceptors.response.use(
 			try {
 				originalRequest._isRetry = true
 				const { data } = await axiosClassic.get<IAuthResponse>(
-					'8ab9a41f357e.vps.myjino.ru',
+					'https://8ab9a41f357e.vps.myjino.ru',
 					{
 						withCredentials: true,
 					},

@@ -2,7 +2,7 @@
 const nextConfig = {
 	reactStrictMode: false,
 	env: {
-		BASE_URL: 'http://localhost:5000',
+		BASE_URL: 'https://8ab9a41f357e.vps.myjino.ru:49462',
 	},
 }
 
